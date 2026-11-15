@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Ntokozo’s 21st Birthday Luncheon</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400;1,600&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#f6ede2;--surf:#fbf5ee;--sand:#e6d3bb;--pink:#d4829c;--blush:#f2d3d9;--ink:#4a2f36;--mute:#7d6068;--on-pink:#fff;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#2a1f22;--surf:#35272b;--sand:#4b3a36;--pink:#e497b0;--blush:#4a2f38;--ink:#f6e8e4;--mute:#cbb3b3;--on-pink:#2a1f22}}
+:root[data-theme="dark"]{--bg:#2a1f22;--surf:#35272b;--sand:#4b3a36;--pink:#e497b0;--blush:#4a2f38;--ink:#f6e8e4;--mute:#cbb3b3;--on-pink:#2a1f22}
+*,*::before,*::after{box-sizing:inherit}
+html{scroll-behavior:smooth;scroll-padding-top:env(safe-area-inset-top,0px)}
+body{margin:0;background:var(--bg);color:var(--ink);font:300 1.05rem/1.7 "Jost",system-ui,sans-serif}
+h1,h2,h3{font-family:"Cormorant Garamond",Georgia,serif;font-weight:600;line-height:1.1;margin:0}
+section{padding:4.5rem 1.4rem;max-width:980px;margin:0 auto;text-align:center}
+h2{font-size:clamp(2.2rem,6vw,3.2rem);margin-bottom:.4rem}
+.sub{color:var(--mute);max-width:34rem;margin:0 auto 0rem}
+.hero{display:grid;gap:2rem;align-items:center;padding-top:3rem;min-height:100svh;grid-template-columns:1fr}
+.arch{width:min(78vw,340px);aspect-ratio:3/4;margin:0 auto;border-radius:999px 999px 24px 24px;overflow:hidden;border:6px solid var(--blush);box-shadow:0 0 0 2px var(--pink)}
+.arch img{width:100%;height:100%;object-fit:cover;display:block}
+.hero h1{font-size:clamp(3rem,11vw,5.6rem);font-style:italic;font-weight:400}
+.hero h1 b{display:block;font-style:normal;font-weight:600;color:var(--pink);font-size:.6em;margin-top:.2em}
+.lede{font-size:1.15rem;margin:1rem auto 0;max-width:30rem}
+.count{display:flex;gap:.7rem;justify-content:center;margin-top:1.6rem}
+.count div{background:var(--surf);border:1px solid var(--sand);border-radius:14px;padding:.6rem .9rem;min-width:4.2rem}
+.count span{display:block;font:600 1.9rem "Cormorant Garamond",serif;color:var(--pink)}
+.count small{font-size:.75rem;color:var(--mute)}
+@media(min-width:820px){.hero{grid-template-columns:1fr 1fr;text-align:left}.hero .count{justify-content:flex-start}.hero .lede{margin-left:0}}
+.band{background:var(--blush);max-width:none}
+.band>div{max-width:980px;margin:auto}
+.details{display:grid;gap:1rem;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));margin-top:2rem}
+.card{background:var(--surf);border:1px solid var(--sand);border-radius:20px;padding:1.6rem 1.2rem}
+.card h3{font-size:1.6rem;color:var(--pink);margin-bottom:.3rem}
+.map{margin-top:2rem;border-radius:22px;overflow:hidden;border:6px solid var(--surf);box-shadow:0 0 0 1px var(--sand)}
+.map iframe{display:block;width:100%;height:340px;border:0}
+.btn{display:inline-block;margin-top:1.2rem;padding:.85rem 1.8rem;border-radius:999px;background:var(--pink);color:var(--on-pink);text-decoration:none;font-weight:500;letter-spacing:.02em}
+.btn:focus-visible,a:focus-visible{outline:3px solid var(--ink);outline-offset:3px}
+.btn.alt{background:transparent;color:var(--ink);border:1.5px solid var(--pink)}
+.chips{display:flex;justify-content:center;gap:.5rem;margin:0 0 2rem;flex-wrap:wrap}
+.chips i{width:46px;height:46px;border-radius:50%;border:2px solid var(--surf);box-shadow:0 0 0 1px var(--sand)}
+.refs{display:grid;gap:1rem;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));max-width:320px;margin:0 auto}
+.refs img{width:100%;border-radius:18px;display:block}
+.refs figcaption{font-size:.9rem;color:var(--mute);margin-top:.4rem}
+figure{margin:0}
+.note{background:var(--blush);border-radius:18px;padding:1.2rem 1.4rem;max-width:36rem;margin:2rem auto 0}
+.gifts{list-style:none;padding:0;margin:2rem auto 0;max-width:32rem;text-align:left;display:grid;gap:.6rem}
+.gifts li{background:var(--surf);border:1px solid var(--sand);border-radius:14px;padding:.8rem 1.1rem;display:flex;gap:.8rem;align-items:center}
+.gifts li:first-child::before{content:none}
+.gifts li::before{content:"♡";color:var(--pink);font-size:1.3rem}
+
+/* Photo slideshow */
+.gal-wrap{position:relative;max-width:980px;margin:2rem auto 0}
+.gal{display:flex;gap:.8rem;overflow-x:auto;scroll-snap-type:x mandatory;scroll-behavior:smooth;scrollbar-width:none;-webkit-overflow-scrolling:touch}
+.gal::-webkit-scrollbar{display:none}
+.gal img{flex:0 0 auto;height:420px;aspect-ratio:3/4;object-fit:cover;border-radius:16px;scroll-snap-align:center}
+@media(max-width:600px){.gal img{height:340px}}
+.gal-btn{position:absolute;top:50%;transform:translateY(-50%);width:44px;height:44px;border-radius:50%;border:0;background:var(--pink);color:var(--on-pink);font-size:1.5rem;cursor:pointer;z-index:2}
+.gal-btn.prev{left:.4rem}.gal-btn.next{right:.4rem}
+
+footer{padding:3rem 1.4rem 4rem;text-align:center;color:var(--mute)}
+footer h3{font-size:2rem;color:var(--ink)}
+@media(prefers-reduced-motion:no-preference){.arch{animation:rise 1s ease-out both}@keyframes rise{from{opacity:0;transform:translateY(24px)}}}
+</style></head><body>
+
+<section class="hero">
+ <div class="arch"><img src="images/cover.jpeg" alt="Ntokozo smiling in a red top"></div>
+ <div>
+  <p style="margin:0;color:var(--mute)">You’re invited to a luncheon for</p>
+  <h1>Ntokozo’s 21st<b>birthday celebration</b></h1>
+  <p class="lede">Saturday, 5 December 2026 at 12:30 pm. Come celebrate with good food, good people and a lot of beige.</p>
+  <div class="count" id="count" aria-live="off"><div><span id="d">0</span><small>days</small></div><div><span id="h">0</span><small>hours</small></div><div><span id="m">0</span><small>mins</small></div></div>
+  <a class="btn" href="#rsvp">RSVP now</a>
+ </div>
+</section>
+
+<section class="band"><div>
+ <h2>The details</h2>
+ <p class="sub">A relaxed afternoon luncheon at Pumua Guesthouse &amp; Spa.</p>
+ <div class="details">
+  <div class="card"><h3>Date</h3>Saturday<br>5 December 2026</div>
+  <div class="card"><h3>Time</h3>12:30 pm</div>
+  <div class="card"><h3>Place</h3>Pumua Guesthouse &amp; Spa<br>27 Haynes St, Witpoortjie, Roodepoort, 1724</div>
+ </div>
+ <div class="map"><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d114550.53736143885!2d27.716067993643733!3d-26.206296003005683!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1e959f7b81f45d7f%3A0x2419c806089be008!2sPumua%20Guesthouse%20%26%20SPA!5e0!3m2!1sen!2sza!4v1794754686952!5m2!1sen!2sza" allowfullscreen loading="lazy" referrerpolicy="strict-origin-when-cross-origin" title="Map to Pumua Guesthouse &amp; Spa"></iframe></div>
+ <a class="btn alt" href="https://www.google.com/maps/search/?api=1&query=Pumua+Guesthouse+%26+Spa" target="_blank" rel="noopener">Open in Google Maps</a>
+</div></section>
+
+<section>
+ <h2>Dress in beige</h2>
+ <p class="sub">The theme is different shades of beige. Wear anything from cream and ivory to sand, tan and taupe. Use the pictures below for inspiration.</p>
+ <div class="chips" aria-hidden="true"><i style="background:#f3ece0"></i><i style="background:#e8d8c0"></i><i style="background:#dcc4a2"></i><i style="background:#cfb08c"></i><i style="background:#bf9f80"></i></div>
+ <div class="refs">
+    <figure><img src="images/colour.jpeg" alt="Nine paint swatches from white to taupe"><figcaption>Shades to wear</figcaption></figure>
+ </div>
+</section>
+
+<section class="band"><div>
+ <h2>Gifts</h2>
+ <p class="sub">A kind request: please no purple, brown or yellow items, and no earrings. Thank you!</p>
+ <p class="note" style="margin-top:.8rem">If you’d like to give something, here are a few ideas:</p>
+ <ul class="gifts">
+  <li style="display:block;text-align:center"><b>Money sent directly to this account</b><br><span id="acct">Account Details:
+
+<br>Account holder: MISS NTOKOZO NH TSHABALALA
+<br>Bank name: Standard Bank
+<br>Account number: 04 454 452 9 </span></li>
+  <li>Voucher (Clicks, Dis-Chem, Takealot, or any Clothing store)</li>
+  <li>Essence Make-Up Kit</li>
+  <li>Instax Camera </li>
+  <li>Lentheric Perfume</li>
+  <li>Baby Blue Handbag</li>
+  <li>Gift of your choice</li>
+ </ul>
+ <p class="note"> Your presence is also the best gift.</p>
+ </div></section>
+
+<section>
+ <h2>A little of me</h2>
+ <p class="sub">Twenty-one and ready.</p>
+ <div class="gal-wrap">
+  <button class="gal-btn prev" aria-label="Previous photo">‹</button>
+  <div class="gal" id="gal">
+   <img src="images/1.jpeg" alt="Ntokozo as a baby" loading="lazy">
+   <img src="images/2.jpeg" alt="Ntokozo as a toddler" loading="lazy">
+   <img src="images/3.jpeg" alt="Ntokozo smiling when she was younger" loading="lazy">
+   <img src="images/4.jpeg" alt="Ntokozo's first day at school" loading="lazy">
+   <img src="images/5.jpeg" alt="Ntokozo smiling" loading="lazy">
+   <img src="images/6.jpeg" alt="Ntokozo as a teen" loading="lazy">
+   <img src="images/7.jpeg" alt="Ntokozo with her favourite shoes" loading="lazy">
+   <img src="images/8.jpeg" alt="Ntokozo with short hair" loading="lazy">
+   <img src="images/9.jpeg" alt="Ntokozo in 2022" loading="lazy">
+   <img src="images/10.jpeg" alt="Ntokozo in 2022" loading="lazy">
+   <img src="images/11.jpeg" alt="Ntokozo going on vacation" loading="lazy">
+   <img src="images/12.jpeg" alt="Ntokozo in her matric year" loading="lazy">
+   <img src="images/13.jpeg" alt="Ntokozo after her matric dance" loading="lazy">
+   <img src="images/14.jpeg" alt="Ntokozo with her traditional attire" loading="lazy">
+   <img src="images/15.jpeg" alt="Ntokozo with short hair again" loading="lazy">
+   <img src="images/16.jpeg" alt="Ntokozo in 2025" loading="lazy">
+   <img src="images/17.jpeg" alt="Ntokozo in 2025" loading="lazy">
+   <img src="images/18.jpeg" alt="Ntokozo on her 20th birthday" loading="lazy">
+   <img src="images/19.jpeg" alt="Ntokozo attending an event" loading="lazy">
+   <img src="images/20.webp" alt="Ntokozo smiling in 2026" loading="lazy">
+   <img src="images/21.webp" alt="Ntokozo in a collage" loading="lazy">
+   <img src="images/22.jpeg" alt="Ntokozo in 2026" loading="lazy">
+   <img src="images/23.jpeg" alt="Ntokozo in 2026" loading="lazy">
+  </div>
+  <button class="gal-btn next" aria-label="Next photo">›</button>
+ </div>
+</section>
+
+<section class="band" id="rsvp"><div>
+ <h2>RSVP</h2>
+ <p class="sub">Please ensure you RSVP by 25 November 2026. <br> WhatsApp or Call:</p>
+ <div class="details" >
+  <div class="card"><h3>Ntokozo</h3>0678353045<br><a class="btn" href="https://wa.me/27678353045" target="_blank" rel="noopener">WhatsApp</a> <a class="btn alt" href="tel:0678353045">Call</a></div>
+  <div class="card"><h3>Jabulile</h3>0736567697<br><a class="btn" href="https://wa.me/27736567697" target="_blank" rel="noopener">WhatsApp</a> <a class="btn alt" href="tel:0736567697">Call</a></div>
+  <div class="card"><h3>Gabriel</h3>0609655874<br><a class="btn" href="https://wa.me/27609655874" target="_blank" rel="noopener">WhatsApp</a> <a class="btn alt" href="tel:0609655874">Call</a></div>
+ </div>
+</div></section>
+
+<footer><h3>Ntokozo’s 21st</h3><p>5 December 2026 · 12:30 pm · Pumua Guesthouse &amp; Spa</p></footer>
+
+<script>
+(function(){var t=new Date(2026,11,5,12,30).getTime();
+function u(){var s=Math.max(0,t-Date.now())/1000;
+document.getElementById("d").textContent=Math.floor(s/86400);
+document.getElementById("h").textContent=Math.floor(s%86400/3600);
+document.getElementById("m").textContent=Math.floor(s%3600/60)}
+u();setInterval(u,30000)})();
+</script>
+
+<script>
+(function(){
+ var g=document.getElementById("gal"),paused=false;
+ function step(){return g.querySelector("img").offsetWidth+13}
+ function next(){
+  if(g.scrollLeft+g.clientWidth>=g.scrollWidth-5){g.scrollTo({left:0})}
+  else{g.scrollBy({left:step()})}
+ }
+ document.querySelector(".gal-btn.next").onclick=next;
+ document.querySelector(".gal-btn.prev").onclick=function(){g.scrollBy({left:-step()})};
+ ["mouseenter","touchstart","focusin"].forEach(function(e){g.addEventListener(e,function(){paused=true})});
+ ["mouseleave","touchend","focusout"].forEach(function(e){g.addEventListener(e,function(){paused=false})});
+ if(!matchMedia("(prefers-reduced-motion: reduce)").matches){
+  setInterval(function(){if(!paused)next()},1500);
+ }
+})();
+</script>
+</body></html>
